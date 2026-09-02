@@ -1,0 +1,13 @@
+[Unit]
+Description=xaga mic source auto-switch (headset AIN1 vs built-in AIN0)
+After=sound.target
+Wants=sound.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/xaga-mic-switch
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

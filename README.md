@@ -12,7 +12,7 @@ Instead of patching UCM, leave one "Built-in Microphone" device and switch routi
 ```
 # On device, as root
 gcc -O2 -Wall -o xaga-mic-switch mic/xaga-mic-switch.c -lasound
-mv xaga-mic-switch /usr/local/bin/xaga-mic-switch
+mv xaga-mic-switch /usr/local/sbin/xaga-mic-switch
 cp -r mic/xaga-mic-switch.service /etc/systemd/system/xaga-mic-switch.service
 systemctl daemon-reload
 systemctl enable --now xaga-mic-switch.service
